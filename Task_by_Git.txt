@@ -11,3 +11,56 @@
 - объединять комиты на существующей ветке в один
 найди для себя пункты, по которым у тебя пробелы, и просветись по ним, если вопросы будут, задавай
 
+1) создавать ветки:
+git branch <branch>
+
+2) удалять ветки:
+git branch -d <branch>
+
+3) переключаться между ветками:
+git checkout <branch>
+
+4) мержить одну ветку в другую:
+	- Переходимо на потрібну гілку
+git checkout master
+	- Мержим
+git merge <branch>
+
+5) комитить:
+git commit -m "my_comment"
+
+6) пулить изменения с репозитория:
+git checkout <branch>
+git pull origin <branch>
+	- або
+git fetch [имя удал. сервера]
+git fetch origin
+
+7) пушить изменения в репозиторий:
+git push [удал. сервер] [ветка]
+git push origin <branch>
+
+8) откатывать комиты:
+git revert commit-sha1
+
+9) делать черипики комитов из 1 ветки в другую:
+git checkout <branch>
+git pull origin <branch>
+git cherry-pick commit-sha1
+git push origin <branch>
+
+10) рибейсить 1 ветку в другую:
+git checkout master
+git merge <branch>
+	- або
+git rebase [осн. ветка] [тем. ветка] 
+git rebasee <this_branch> <on_branch>
+
+11) объединять комиты на существующей ветке в один:
+git rebase --interactive HEAD~2
+
+pick commit-sha1 comment
+squash commit-sha1 comment
+	- або
+git reset --soft HEAD^1
+git commit --amend

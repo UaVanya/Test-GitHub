@@ -1,0 +1,17 @@
+а) создай новую ветку на основе мастера
+б) ривертни свой комит последний
+в) сделай 3 комита в этой ветке
+в.1 - добавишь только изменения в xml файлы
+в.2 - добавлшь тоько изменения в основные классы
+в.3 - добавишь только изменения в тестовые файлы
+г) запуш её и создай пулл риквест на мастер
+
+    git pull <branch>
+a) git checkout -b <branch>
+б) git revert fb9e1d96c3e9d0bdbaa62d892f204affea937d32
+   git add *
+в) 
+в.1) git commit -m "Add change XML file"
+в.2) git commit -m "Add change main classes"
+в.3) git commit -m "Add change testing classes"
+г) git push origin branch2

@@ -1,0 +1,83 @@
+UserName@ComputerName MINGW32 /d/Git_Projercts (master)
+__________________________________________________________________________________________________________________________________________
+	#File config:
+C:\Users\VJKL\.gitconfig	
+__________________________________________________________________________________________________________________________________________
+		<-- HELP -->
+git -list	git --list	git -l
+git config
+git config --list
+git help commit		git commit --help
+__________________________________________________________________________________________________________________________________________
+git config --global user.name "Ivan Kovanych"
+git config --global user.email "uavanya@ukr.net"
+	#For manual editing
+git config --global core.editor "'C:\Program Files\Notepad++\notepad++.exe' -multiInst -notabbar -nosession -noPlugin"
+	#All branch be push
+git config --global push.default matching
+	#commit & init:
+git init
+	#Delete init:
+git rm	--cached test.txt
+	#Show status:
+git status
+	#Show history commit
+git hist
+__________________________________________________________________________________________________________________________________________
+	#add & commit:
+git add <filename>
+git add *.txt
+git add * 	
+git add .
+git add --all
+git commit -m "Commit message"
+	#commit + manual editing (add Commit message)
+git commit
+	#commit & init:
+git commit -a -m "Commentary"
+__________________________________________________________________________________________________________________________________________
+		<-- GitHub.com repository -->
+__________________________________________________________________________________________________________________________________________
+	#New Repository:
+git remote add origin https://github.com/UserName/NameRepository.git
+git push -u origin master
+	#Clone Repository:
+git clone https://github.com/UserName/NameRepository.git
+
+	#Delete branch on Server
+git push origin :name_btanch
+__________________________________________________________________________________________________________________________________________
+git log
+	#Compact show logs
+git log --pretty=format:"%h - %an, %ar : %s"
+	#Display logs for the last two weeks
+git log --since=2.weeks
+	#2 in 1 (previous)
+git log --since=2.weeks --pretty=format:"%h - %an, %ar : %s"
+	#Display change (after + before) & Two last commit
+git log -p -2
+	#Graph branch
+git log --graph --all --decorate --oneline
+__________________________________________________________________________________________________________________________________________
+		<-- Checkout -->
+__________________________________________________________________________________________________________________________________________
+	#Возвращает файл (file.txt) до последниго состояния в репозитории:
+git checkout -- file.txt
+__________________________________________________________________________________________________________________________________________
+	#Create new branch (branch от. англ. ветка):
+git branch <branch>
+	#Switch to new_Branch
+git checkout <branch>
+	#Create new branch & switch to new_Branch:
+git checkout -b <branch>
+	#See branch:
+git branch
+	#See branch & brief info:
+git branch -v
+__________________________________________________________________________________________________________________________________________
+git merge <branch>
+__________________________________________________________________________________________________________________________________________
+	#Удаление и переименование удалённых репозиториев:
+git remote rename pb paul
+git remote
+__________________________________________________________________________________________________________________________________________
